@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+
+body{
+    background-image: url(../images/sema.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    
+
+    .buludlar{
+        z-index: 2;
+        position: absolute;
+        left: 100px;
+        display: flex;
+        justify-content: space-around;
+        .bulud{
+            width: 500px;
+            height: 400px;
+            img{
+                width: 100%;
+                
+            }
+        }
+    }
+
+    .plane{
+        position: absolute;
+       
+        animation: plane-animation infinite;
+        animation-duration: 16s; 
+        animation-timing-function: linear;
+        img{
+            width: 100%;
+        }
+    }
+
+    .birds{
+        position: absolute;
+        right: -1000px;
+        z-index: 3;
+        animation: birds-animation ;
+        animation-duration:8s;
+        animation-timing-function: linear;
+        
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@keyframes plane-animation {
+    0%   { left:0px; top: -50px; width: 200px;}
+    100% { left:1150px; top:400px; width: 400px;}
+  }
+
+  @keyframes birds-animation {
+    0%   { right:0px; top: -200px;width: 500px; }
+    100% { right:1150px; top:400px; width: 1400px; display: none;}
+  }
+
